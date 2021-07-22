@@ -7,4 +7,8 @@ environment ENV.fetch("RAILS_ENV") { ENV['RACK_ENV'] || "production" }
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 workers ENV.fetch("WEB_CONCURRENCY") { 2 }
 preload_app!
+<<<<<<< HEAD
 plugin :tmp_restart
+=======
+plugin :tmp_restar 
+>>>>>>> 4a5db3c5fcb5fe96e0968a4943e9a9afc10ae640

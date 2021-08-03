@@ -18,8 +18,13 @@ class UsersController < ApplicationController
     end
   end
   
-  private
+  #GET /users/:id/editパッチ用フォームを表示する
+  def edit
+    @user = User.find(params[:id])
+    #defalut => app/views/users/edit.html.erb
+  end
   
+  private
     def user_params
       params.require(:user).permit(:name, :email, :password,
                                   :password_confirmation)

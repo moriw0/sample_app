@@ -19,9 +19,13 @@ class PasswordResetsController < ApplicationController
     end
   end
   
+  # GET /password_resets/:id/edit
   def edit
+    # dafault render
+    # app/views/password_resets/edit.html.erb
   end
   
+  # PATCH /password_resets/:id
   def update
     if params[:user][:password].empty?
       @user.errors.add(:password, :blank)

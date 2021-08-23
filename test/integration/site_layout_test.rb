@@ -21,6 +21,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
       assert_select "a[href=?]", edit_user_path(@user)
       assert_select "a[href=?]", logout_path
       assert_select "a[href=?]", "https://news.railstutorial.org/"
+      assert_select 'div.stats', count:1
     end
     
     test "layout links when not logged in" do
